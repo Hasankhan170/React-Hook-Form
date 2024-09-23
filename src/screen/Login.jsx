@@ -15,7 +15,7 @@ function Login() {
    
     if (data.email === storedEmail && data.password === storedPassword) {
       alert('Login successful!');
-      navigate('Home'); 
+      navigate('/Home'); 
     } else {
       alert('Incorrect email or password.');
     }
