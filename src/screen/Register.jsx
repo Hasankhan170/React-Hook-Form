@@ -4,6 +4,7 @@ import '../screen/Register.css'
 
 const Register = () => {
 
+  const navigate = use
   const {
     register,
     handleSubmit,
@@ -14,7 +15,13 @@ const Register = () => {
   const password = watch('password', '');
 
   const RegisterForm = (data)=>{
-    console.log(data);
+
+    localStorage.setItem('email', data.email)
+    localStorage.setItem('email', data.password)
+
+    setTimeout(()=>{
+      alert('Registration successful! Now you can log in.')
+    },1000)
     
   }
 
