@@ -1,10 +1,11 @@
 import { useForm } from 'react-hook-form';
 import '../screen/Register.css'
+import { useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
+  const navigate = useNavigate()
 
-  const navigate = use
   const {
     register,
     handleSubmit,
@@ -15,12 +16,13 @@ const Register = () => {
   const password = watch('password', '');
 
   const RegisterForm = (data)=>{
-
     localStorage.setItem('email', data.email)
-    localStorage.setItem('email', data.password)
+    localStorage.setItem('password', data.password)
 
+   
     setTimeout(()=>{
       alert('Registration successful! Now you can log in.')
+      navigate('/Login')
     },1000)
     
   }
