@@ -15,6 +15,7 @@
     padding: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     box-sizing: border-box; 
+
 }
 
 .register-form {
@@ -26,6 +27,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
+    color: #06dc06;
 }
 
 .btn {
@@ -60,3 +62,12 @@
   }
   
 
+.password-strength{
+    color: red; 
+    font-size: 15px; 
+    margin-top: 5px;
+    text-align: left; 
+    width: 100%;
+    box-sizing: border-box; 
+    padding-left: 5px;
+}

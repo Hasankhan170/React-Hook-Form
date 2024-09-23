@@ -1,5 +1,3 @@
-
-// import { useRef } from 'react'
 import { useForm } from 'react-hook-form';
 import '../screen/Register.css'
 
@@ -13,23 +11,13 @@ const Register = () => {
     formState: { errors },
   } = useForm()
 
+  const password = watch('password', '');
+
   const RegisterForm = (data)=>{
     console.log(data);
     
   }
-  // const inputName = useRef()
-  // const inputEmail = useRef()
-  // const inputPassword = useRef()
 
-
-
-  // const RegisterForm = (e)=>{
-  //   e.preventDefault();
-  //   console.log(inputName.current.value);
-  //   console.log(inputEmail.current.value);
-  //   console.log(inputPassword.current.value);
-    
-  // }
 
   return (
   <>
@@ -42,6 +30,8 @@ const Register = () => {
 
         <input className={`register-form ${errors.password ? 'input-error' : ''}`} type="password" placeholder='Enter Your Password' {...register('password' , {required : 'Password is required' , minLength : {value : 6 , message: 'Password must be at least 6 characters',},})}/>
         {errors.password && <p className='error-message'>{errors.password.message}</p>}
+        {password && (<p className="password-strength">{password.length < 6 ? <span style={{color :'red'}}>Password is weak</span>: <span style={{color: '#06dc06'}}>Password is strong</span>}</p>)}
+
         <button type='submit' className='btn'>Register</button>
       </form>
   </>
