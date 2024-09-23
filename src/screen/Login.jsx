@@ -4,7 +4,7 @@ import '../screen/Login.css'
 function Login() {
   return (
     <>
-    <h3 className='text'>Register</h3>
+    <h3 className='text'>Login</h3>
     </>
   )
 }
