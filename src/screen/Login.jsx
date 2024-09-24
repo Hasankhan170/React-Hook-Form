@@ -21,7 +21,7 @@ function Login() {
 
       navigate('/Home'); 
       setTimeout(()=>{
-        window.location.reload()
+        // window.location.reload()
       },1000)
     } else {
       alert('Incorrect email or password.');
