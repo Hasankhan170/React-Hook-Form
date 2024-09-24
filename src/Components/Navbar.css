@@ -11,3 +11,10 @@
     transition: color 0.3s ease;
     font-size: 20px;
 }
+
+.btn{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}

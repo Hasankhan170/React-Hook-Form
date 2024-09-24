@@ -8,13 +8,17 @@ function Login() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
 
-  const loginForm = (data) => {
+    const loginForm = (data) => {
     const storedEmail = localStorage.getItem('email');
     const storedPassword = localStorage.getItem('password');
 
    
     if (data.email === storedEmail && data.password === storedPassword) {
       alert('Login successful!');
+
+      const user = { email :data.email}
+      localStorage.setItem('user' , JSON.stringify(user))
+
       navigate('/Home'); 
     } else {
       alert('Incorrect email or password.');
