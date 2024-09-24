@@ -20,6 +20,9 @@ function Login() {
       localStorage.setItem('user' , JSON.stringify(user))
 
       navigate('/Home'); 
+      setTimeout(()=>{
+        window.location.reload()
+      },1000)
     } else {
       alert('Incorrect email or password.');
     }
