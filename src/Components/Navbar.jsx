@@ -11,7 +11,10 @@ const Navbar = () => {
   useEffect(()=>{
     const user = localStorage.getItem('user')
     setIsLoggedIn(user !== null); 
-  },[])
+    if (user) {
+      navigate('/Home');
+    }
+  },[navigate])
 
   const handleLogout = ()=>{
     localStorage.removeItem('user')
