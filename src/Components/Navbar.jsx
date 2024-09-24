@@ -10,11 +10,7 @@ const Navbar = () => {
 
   useEffect(()=>{
     const user = localStorage.getItem('user')
-    if(user){
-      setIsLoggedIn(true)
-    }else{
-      setIsLoggedIn(false)
-    }
+    setIsLoggedIn(user !== null); 
   },[])
 
   const handleLogout = ()=>{

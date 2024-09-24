@@ -1,24 +1,7 @@
-import { useEffect, useState } from "react"
+
 
 
 const Home = () => {
-
-  const [hasReload, setHasReload] = useState(false)
-
-  useEffect(()=>{
-    if(!hasReload){
-     const timer = setTimeout(()=>{
-        window.location.reload()
-      },1000)
-
-      return ()=> clearTimeout(timer)
-    }
-  },[hasReload])
-
-  useEffect(()=>{
-    setHasReload(true)
-  },[])
-
 
   return (
     <>
