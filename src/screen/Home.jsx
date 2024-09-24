@@ -1,10 +1,25 @@
+import { useEffect, useState } from "react"
 
 
 const Home = () => {
-  
-  setTimeout(()=>{
-    window.location.reload()
-  },1000)
+
+  const [hasReload, setHasReload] = useState(false)
+
+  useEffect(()=>{
+    if(!hasReload){
+     const timer = setTimeout(()=>{
+        window.location.reload()
+      },1000)
+
+      return ()=> clearTimeout(timer)
+    }
+  },[hasReload])
+
+  useEffect(()=>{
+    setHasReload(true)
+  },[])
+
+
   return (
     <>
     <h2 style={{
