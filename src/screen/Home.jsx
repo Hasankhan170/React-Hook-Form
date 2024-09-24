@@ -1,6 +1,10 @@
 
 
 const Home = () => {
+  
+  setTimeout(()=>{
+    window.location.reload()
+  },1000)
   return (
     <>
     <h2 style={{
